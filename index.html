@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    .pagina { display: none; transition: opacity 0.4s ease; }
+    .pagina.active { display: block; }
+
+    .cover-transition {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.6s ease;
+      z-index: 1050;
+      pointer-events: none;
+    }
+    .cover-transition.active {
+      transform: scaleX(1);
+    }
+  </style>
+<body>
+    <!-- Tela de carregamento -->
+<div id="preloader">
+    <div class="loader">
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+      <div class="loader-square"></div>
+    </div>
+    <div class="w-logo" id="wLogo">WorkAli</div>
+  </div>
+
+  <!-- Cover transition -->
+  <div class="cover-transition" id="cover"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WorkAli</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menu Lateral -->
+  <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#" data-section="home">Introdução</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-section="descricao">Descrição do problema</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" data-section="justificativas">Justificativas</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Conteúdo -->
+  <main class="container mt-5 pt-5">
+    <section id="home" class="pagina active">
+      <h1 class="display-4">Evasão Escolar</h1>
+      <p class="lead">Qual a relevância de discutir a evasão escolar e seus impactos na sociedade?</p>
+      <h2 class="py-3">Introdução</h2>
+      <p>A evasão escolar é um dos grandes desafios enfrentados pela educação, impactando o futuro de milhares de estudantes e comprometendo o desenvolvimento social e econômico do país. Diversos fatores contribuem para esse problema, incluindo dificuldades financeiras, falta de interesse, problemas familiares e métodos de ensino pouco engajadores. A ausência de uma solução eficaz resulta não apenas na perda de oportunidades para os jovens, mas também em prejuízos para toda a sociedade, que enfrenta maior desigualdade e menor qualificação da mão de obra.</p>
+
+      <p>Este projeto tem como objetivo analisar as principais causas da evasão escolar e propor estratégias para minimizar esse fenômeno. A partir de um estudo aprofundado, incluindo a perspectiva dos alunos, professores e gestores, será possível compreender os desafios enfrentados e desenvolver soluções inovadoras que incentivem a permanência dos estudantes no ambiente escolar.</p>
+    </section>
+
+    <section id="descricao" class="pagina">
+      <h1 class="display-4">Descrição do problema</h1>
+      <p class="lead">Quais são os principais desafios e impactos da evasão escolar?</p>
+      <h2 class="py-3">Desafios e impactos</h2>
+      <p>O abandono escolar precoce representa um grande desafio para a educação e para o desenvolvimento social. Entre os principais desafios, destacam-se a vulnerabilidade econômica das famílias, a necessidade de inserção precoce dos jovens no mercado de trabalho e a falta de políticas públicas eficazes para manter os alunos na escola. Além disso, fatores como desmotivação, dificuldades de aprendizagem e a falta de um ambiente escolar acolhedor também contribuem para esse problema.</p>
+
+      <p>Os impactos da evasão escolar são profundos e afetam tanto o indivíduo quanto a sociedade. Para os jovens, abandonar a escola reduz significativamente suas oportunidades de emprego e crescimento profissional, aumentando a probabilidade de instabilidade financeira e dificuldades futuras. No contexto social e econômico, a alta taxa de evasão escolar contribui para a perpetuação da desigualdade social, reduz a qualificação da força de trabalho e impacta negativamente o desenvolvimento do país.</p>
+    </section>
+
+    <section id="justificativas" class="pagina">
+      <h1 class="display-4">Justificativas</h1>
+      <p class="lead">Por que é fundamental combater a evasão escolar?</p>
+
+      <h2 class="py-3">Dados coletados</h2>
+      <p>A evasão escolar no Brasil é um desafio grave, afetando 18% dos jovens de 14 a 29 anos, segundo a Pnad Educação 2022. A necessidade de trabalhar é o principal motivo apontado por 40,2% dos que abandonam os estudos, refletindo a desigualdade social. Além disso, fatores como reprovações, falta de incentivo e vulnerabilidade social também contribuem para o problema. O Brasil tem a terceira maior taxa de abandono escolar entre os 100 países com maior IDH, evidenciando a urgência de medidas eficazes.</p>
+
+      <p>Pesquisas internacionais, como um estudo longitudinal da Universidade de Coimbra, mostram que o abandono escolar precoce está associado a maiores índices de comportamento antissocial e dificuldades de adaptação. Jovens que saem da escola antes dos 16 anos apresentam mais dificuldades sociais e comportamentais em comparação com aqueles que continuam estudando.</p>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const cover = document.getElementById('cover');
+
+    document.querySelectorAll('[data-section]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const id = link.getAttribute('data-section');
+
+        // Ativa a cover
+        cover.classList.add('active');
+
+        // Aguarda a animação e troca de seção
+        setTimeout(() => {
+          // Esconde todas
+          document.querySelectorAll('.pagina').forEach(sec => sec.classList.remove('active'));
+
+          // Mostra a nova
+          document.getElementById(id).classList.add('active');
+
+          // Fecha o menu lateral se estiver aberto
+          const offcanvasEl = document.querySelector('.offcanvas.show');
+          if (offcanvasEl) bootstrap.Offcanvas.getInstance(offcanvasEl).hide();
+
+          // Retira a cover
+          setTimeout(() => cover.classList.remove('active'), 300);
+        }, 400); // Tempo de entrada da cover
+      });
+    });
+  </script>
+</body>
+</html>
+
+
